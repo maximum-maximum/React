@@ -1,4 +1,4 @@
-import React, { useState, useEffect, memo } from "react";
+import React, { useState } from "react";
 import usePersist from "../Persist";
 
 function DelForm(props) {
@@ -11,7 +11,7 @@ function DelForm(props) {
 
   const doAction = (e) => {
     let res = memo.filter((item, key) => {
-      return key != num;
+      return key !== num;
     });
     setMemo(res);
     setNum(0);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, memo } from "react";
+import React, { useState } from "react";
 import usePersist from "../Persist";
 
 function FindForm(props) {
@@ -12,7 +12,7 @@ function FindForm(props) {
   };
 
   const doAction = (e) => {
-    if (message == "") {
+    if (message === "") {
       setMode("default");
       return;
     }
